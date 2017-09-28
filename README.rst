@@ -11,12 +11,38 @@ The following instructions provide guidance on how to get a new example reposito
 #. Create an `new issue <https://github.com/OpenCMISS-Examples/request_new_example/issues/new>`_ on this repository.
 #. In the issue:
 
-  #. Specify the name of the new repository.
-  #. Specify the license for the new repository that you would like.
+   #. Specify the name for the new repository.
+   #. Specify the license for the new repository that you would like.
   
 If you do not specify a license for your new repository the Apache license will be chosen be default.
 
 When an issue is approved a new repository will be created by the organisation maintainers this will enable you to create a pull request against the new repository that will then be reviewed and subsequently (once review comments have been dealt with) merged in.
+
+Process for creating first pull request
+---------------------------------------
+
+The following instructions are offered to provide guidance on the process required to make your first pull request against the new repository.  We will make the assumption that you are doing/going to be doing your work on the *develop* branch.
+
+The first step of the process is to `fork <https://help.github.com/articles/fork-a-repo/>`_ the new repository to your own account.  If you have an existing example on your local disk then follow these instructions:
+
+#. Open a terminal style application
+#. cd /where/my/example/is # make the current directory the root directory of your example.
+
+   - If this directory is **not** a git repository
+   
+     #. git init .
+
+   - then
+
+     #. git remote add origin <location of your forked get repository>
+
+#. git add .
+#. git commit -m "Commit message relevant to the changes made."
+#. git push origin develop
+     
+**Note:** Replace <location of your forked get repository> with the actual location of the repository, the easiest way to do this is to navigate to your forked repository on GitHub and click the **Clone or Download** button.  Copy the clone URL of the repository and substitute this URL for <location of your forked get repository>
+
+Now you should be able to create a new `pull request <https://help.github.com/articles/creating-a-pull-request-from-a-fork/>`_.
 
 Adding New Example
 ==================
